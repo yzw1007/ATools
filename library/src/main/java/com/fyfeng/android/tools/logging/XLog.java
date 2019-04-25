@@ -4,6 +4,40 @@ import android.util.Log;
 
 public final class XLog {
 
+    /**
+     * Priority constant for the println method; use Log.v.
+     */
+    public static final int VERBOSE = Log.VERBOSE;
+
+    /**
+     * Priority constant for the println method; use Log.d.
+     */
+    public static final int DEBUG = Log.DEBUG;
+
+    /**
+     * Priority constant for the println method; use Log.i.
+     */
+    public static final int INFO = Log.INFO;
+
+    /**
+     * Priority constant for the println method; use Log.w.
+     */
+    public static final int WARN = Log.WARN;
+
+    /**
+     * Priority constant for the println method; use Log.e.
+     */
+    public static final int ERROR = Log.ERROR;
+
+    /**
+     * Priority constant for the println method.
+     */
+    public static final int ASSERT = Log.ASSERT;
+
+    public static boolean isLoggable(String tag, int level) {
+        return Log.isLoggable(tag, level);
+    }
+
     public static int v(String tag, String msg) {
         return Log.v(tag, msg);
     }
